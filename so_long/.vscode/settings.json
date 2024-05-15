@@ -1,0 +1,9 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "system_error": "c",
+        "array": "c",
+        "string": "c",
+        "string_view": "c"
+    }
+}
