@@ -23,9 +23,9 @@ CYAN 		:= \033[1;36m
 RM		    := rm -f
 
 ${NAME}:	${OBJS}
-			@echo "$(GREEN)Compilation ${CLR_RMV}of ${YELLOW}$(NAME) ${CLR_RMV}..."
+			@echo "${YELLOW}$(NAME) $(GREEN)Derleniyor ${CLR_RMV}..."
 			${CC} ${FLAGS} -o ${NAME} ${OBJS}
-			@echo "$(GREEN)$(NAME) created[0m ✔️"
+			@echo "$(GREEN)$(NAME) Başarıyla oluşturuldu[0m ✔️"
 
 all:		${NAME}
 
@@ -33,11 +33,11 @@ bonus:		all
 
 clean:
 			@ ${RM} *.o */*.o */*/*.o
-			@ echo "$(RED)Deleting $(CYAN)$(NAME) $(CLR_RMV)objs ✔️"
+			@ echo "$(CYAN)$(NAME) $(CLR_RMV)object dosyaları $(RED)Siliniyor... ✔️"
 
 fclean:		clean
 			@ ${RM} ${NAME}
-			@ echo "$(RED)Deleting $(CYAN)$(NAME) $(CLR_RMV)binary ✔️"
+			@ echo "$(CYAN)$(NAME) $(CLR_RMV)dosyası $(RED)Siliniyor... ✔️"
 
 re:			fclean all
 
