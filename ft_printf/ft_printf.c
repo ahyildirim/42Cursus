@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahyildir <ahyildir@student.42istanbul.com  +#+  +:+       +#+        */
+/*   By: ahyildir <ahyildir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 14:20:45 by ahyildir          #+#    #+#             */
-/*   Updated: 2023/12/25 14:20:46 by ahyildir         ###   ########.tr       */
+/*   Updated: 2024/12/10 17:06:21 by ahyildir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,11 @@ int	ft_convertbase(unsigned long long nb, int base, char *str, int mod)
 		nb *= -1;
 		len += ft_putchar('-');
 	}
-	if (mod == 2)
+	if (mod == 2 && !nb)
+		len += ft_putstr("(nil)");
+	if (mod == 2 && nb != 0)
 		len += ft_putstr("0x");
-	if (nb == 0)
+	if (nb == 0 && mod == 1)
 		len += ft_putchar('0');
 	while (nb > 0)
 	{
