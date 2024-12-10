@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktas <ktas@student.42istanbul.com.tr>      +#+  +:+       +#+        */
+/*   By: ahyildir <ahyildir@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 15:33:21 by ktas              #+#    #+#             */
-/*   Updated: 2023/12/15 15:33:24 by ktas             ###   ########.tr       */
+/*   Created: 2023/12/15 20:53:06 by ahyildir          #+#    #+#             */
+/*   Updated: 2023/12/15 20:53:08 by ahyildir         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_checker(const char c, char const *set)
+int	ft_checker(const char c, char const *set)
 {
 	int	i;
 

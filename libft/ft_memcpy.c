@@ -2,14 +2,11 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+        
-	+:+     */
-/*   By: ktas <ktas@student.42istanbul.com.tr>      +#+  +:+      
-	+#+        */
-/*                                                +#+#+#+#+#+  
-	+#+           */
-/*   Created: 2023/12/15 15:35:48 by ktas              #+#    #+#             */
-/*   Updated: 2023/12/15 15:35:50 by ktas             ###   ########.tr       */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahyildir <ahyildir@student.42istanbul.com  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/15 20:48:34 by ahyildir          #+#    #+#             */
+/*   Updated: 2023/12/15 20:48:36 by ahyildir         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +15,15 @@
 void	*ft_memcpy(void *dest, const void *src, size_t len)
 {
 	size_t				i;
-	unsigned char		*dst;
-	unsigned const char	*sc;
+	unsigned char		*d;
+	unsigned const char	*s;
 
-	dst = (unsigned char *)dest;
-	sc = (unsigned char *)src;
+	d = (unsigned char *) dest;
+	s = (unsigned const char *) src;
 	i = -1;
 	if (!dest && !src)
 		return (NULL);
 	while (++i < len)
-		dst[i] = sc[i];
+		d[i] = s[i];
 	return (dest);
 }

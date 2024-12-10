@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktas <ktas@student.42istanbul.com.tr>      +#+  +:+       +#+        */
+/*   By: ahyildir <ahyildir@student.42istanbul.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 15:31:49 by ktas              #+#    #+#             */
-/*   Updated: 2023/12/15 15:31:50 by ktas             ###   ########.tr       */
+/*   Created: 2023/12/15 20:50:22 by ahyildir          #+#    #+#             */
+/*   Updated: 2023/12/15 20:50:22 by ahyildir         ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_countwords(const char *s, char c)
+int	ft_countwords(char const *s, char c)
 {
-	size_t	count;
+	int	count;
 
 	count = 0;
 	while (*s)
@@ -30,20 +30,20 @@ size_t	ft_countwords(const char *s, char c)
 	return (count);
 }
 
-size_t	ft_countchar(const char *str, char c)
+int	ft_countchars(char const *s, char c)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] && str[i] != c)
+	while (s[i] && s[i] != c)
 		i++;
 	return (i);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	len;
 	char	**str;
+	int		len;
 
 	len = 0;
 	if (!s)
@@ -57,8 +57,8 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if (!*s)
 			break ;
-		str[len++] = ft_substr(s, 0, ft_countchar(s, c));
-		s += ft_countchar(s, c);
+		str[len++] = ft_substr(s, 0, ft_countchars(s, c));
+		s += ft_countchars(s, c);
 	}
 	str[len] = NULL;
 	return (str);

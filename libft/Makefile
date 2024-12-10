@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ktas <ktas@student.42istanbul.com.tr>      +#+  +:+       +#+         #
+#    By: ahyildir <ahyildir@student.42istanbul.com  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/12/15 15:38:58 by ktas              #+#    #+#              #
-#    Updated: 2023/12/15 15:39:05 by ktas             ###   ########.tr        #
+#    Created: 2023/12/15 20:54:00 by ahyildir          #+#    #+#              #
+#    Updated: 2023/12/15 20:54:01 by ahyildir         ###   ########.tr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,4 +40,3 @@ fclean:	clean
 	$(RM) $(NAME)
 
 re:	fclean all
-
